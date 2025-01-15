@@ -122,11 +122,13 @@ public class AccountDAO {
 					accList.get(idx).setMoney(accList.get(idx).getMoney() - money);
 					accList.get(index).setMoney(accList.get(index).getMoney() + money);
 					System.out.println("이체 성공!");
+				}else {
+					System.out.println("계좌를 다시 입력!");return;
 				}
-				System.out.println("계좌를 다시 입력!");return;
 			}
+		}else {
+			System.out.println("계좌를 다시 입력!");return;
 		}
-		System.out.println("계좌를 다시 입력!");return;
 	}
 
 	private boolean findAccountNum(int idx) {
